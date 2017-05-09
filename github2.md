@@ -11,8 +11,8 @@ settings中找到GitHub Pages 将sourse中的None改为master branch，save
 5、Pwd是打印当前工作目录
 6、cd 改变目录
 7、Echo是在命令行打印信息
-8、配置git用户名的命令是 git config --global user.name "李亚欣"
-9、配置邮箱的命令是 git config --global user.email "563294284@qq.com"
+8、配置git用户名的命令是 git config --global user.name ""
+9、配置邮箱的命令是 git config --global user.email ""
 10.\
 11.Ctrl+C
 12.
