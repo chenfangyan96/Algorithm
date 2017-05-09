@@ -15,7 +15,7 @@ settings中找到GitHub Pages 将sourse中的None改为master branch，save
 9. 配置邮箱的命令是 git config --global user.email ""
 10. \
 11. Ctrl+C
-12.
+12. 
 使git能够发挥强大功能的最佳方式
 可以方便的查看每个仓库的状态
 可以写批处理 一次性建多个文件夹
@@ -24,7 +24,7 @@ settings中找到GitHub Pages 将sourse中的None改为master branch，save
 工作区 仓库 中间有暂存区  工作区中对于之前的文档有10个变动  可以将10个变动一起放到暂存区中
 可以选择将10个变动全都commit上去  也可以自己选3+4+3（相当于三个版本） 可以根据自己的需求划分几个版本
 14. git init
-github-create repo_name
+  github-create repo_name
 15. 将URL地址的远程版本库克隆在本地
 16. git add
 17. git rm [file1] [file2]...
