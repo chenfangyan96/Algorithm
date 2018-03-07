@@ -1,0 +1,92 @@
+package nre;
+//重温万年历
+import java.util.Scanner;
+
+public class myfiset {
+
+	public static void main(String[] args) {
+		boolean IsTr;//判断是否闰年
+		int Day=0;//tianshu
+		int beforedays = 0;
+		int count=0;
+		Scanner input=new Scanner(System.in);
+		System.out.println("请输入年份:");
+		int year=input.nextInt();
+		System.out.println("请输入月份:");
+		int month=input.nextInt();
+		if((year%400==0)||((year%4==0)&&(year%100!=0))) {
+				IsTr=true;}
+		else {
+			IsTr=false;
+		}
+		if(IsTr) {
+			System.out.println("run  nian");
+		}else {
+			System.out.println("不是闰年");
+		}
+		for(int i=1900;i<year;i++) {
+			if((i%400==0)||((i%4==0)&&(i%100!=0))) {
+				beforedays+=366;
+			}else {
+				beforedays+=365;
+				
+			}
+			
+		}
+			
+			for(int j=1;j<=month;j++) {
+		switch(j) {
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				Day=31;
+				break;
+			case 2:
+				if(IsTr) {
+					Day=29;
+					
+				}else {
+					Day=28;
+				}
+				break;	
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				Day=30;
+				break;
+			default:
+				System.out.println("输入年份有误");
+			
+			}
+			if(j!=month) {
+			beforedays+=Day;
+			}
+		
+		
+		
+			
+			
+		}
+		
+		count=1+beforedays%7;
+		System.out.println("********************万年历*****************************");
+		System.out.println("星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六\t");
+		for(int i=0;i<count;i++)
+		{
+			System.out.print("\t");
+		}
+		for(int i=1;i<=Day;i++) {
+			System.out.print(i+"\t");
+			if((count+i)%7==0) {
+				System.out.println();
+			}
+		}
+		
+	}
+
+}
