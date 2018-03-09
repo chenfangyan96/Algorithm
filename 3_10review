@@ -1,5 +1,5 @@
 public class myfiset {
-//快速排序
+//插入排序
 	public static void main(String[] args) {
 		int []array= {10,15,46,89,11,1};
 			
