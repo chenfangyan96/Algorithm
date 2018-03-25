@@ -1,0 +1,57 @@
+import java.util.Arrays;
+
+//重写MyStringbuilder
+public class hua {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		My hello= new hua().new My();
+		hello.append("java").append("12345645649879816515316156");
+		System.out.println("字符个数"+hello.length());
+		System.out.println("熔炼个数"+hello.capacity());
+		System.out.println("字符个数"+hello.toString());	
+	}
+class My{
+	private char []value;//字符数组
+	private int count =0;//字符数组汇总存放字符的个数
+	public My() {
+		value=new char[16];
+				}
+	public My(int capacity) {
+		value=new char[capacity];
+		
+		}
+		public My(String str) {
+		value=new char[str.length()+16]; 
+		
+		}
+	//字符个数
+	public int length() {
+		return count;
+		}
+	public int capacity() {
+		return value.length;
+		}
+	public My append(String  str) {
+		int len=str.length();
+		ensureCapacity(count+len);
+		str.getChars(0, len, value, count);
+		count+=len;
+		return this;
+		}
+	private void ensureCapacity(int capacity) {
+		if(capacity-value.length>0) {
+			int newCapacity=value.length*2+2;
+			value=Arrays.copyOf(value, newCapacity);
+			
+			}
+		}
+//	把字符数组转换成字符串显示
+	public String toString() {
+		return new String(value,0,count);
+	}
+	
+}
+
+}sss
